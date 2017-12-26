@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		String方法： 1.charCodeAt() 方法可返回指定位置的字符的 Unicode 编码。这个返回值是 0 - 65535 之间的整数 strObj.charCodeAt(index)参数：strObj;必选项：index； 说明：一个字符串中的第一个字符编号为0，第二个字符串中的第一个字符编号为1，以此类推； 假如指定位置没有字符，将返回NaN; 实例：
+		<script type="text/javascript">
+			var str = "Hello world!"
+			document.write(str.charCodeAt(1))//101 
+		</script>
+		 
+		2.fromcharCode //fromCharCode() 可接受一个指定的 Unicode 值，然后返回一个字符串。 语法 String.fromCharCode(numX,numX,...,numX)
+		<script type="text/javascript">
+			document.write(String.fromCharCode(72, 69, 76, 76, 79)) //HELLO
+			document.write("<br />")
+			document.write(String.fromCharCode(65, 66, 67)) //ABC
+		</script>
+
+		3.charAt //charAt() 方法可返回指定位置的字符。 请注意，JavaScript 并没有一种有别于字符串类型的字符数据类型，所以返回的字符是长度为 1 的字符串。
+		<script type="text/javascript">
+			var str = "Hello world!"
+			document.write(str.charAt(1)) //e
+		</script>
+
+		4.slice //slice() 方法可从已有的数组中返回选定的元素。
+		<script type="text/javascript">
+			var arr = new Array(3)
+			arr[0] = "George"
+			arr[1] = "John"
+			arr[2] = "Thomas"
+
+			document.write(arr + "<br />") //George,John,Thomas
+			document.write(arr.slice(1) + "<br />") //John,Thomas
+			document.write(arr) //George,John,Thomas
+		</script>
+
+		5.substring //substring() 方法用于提取字符串中介于两个指定下标之间的字符。
+		<script type="text/javascript">
+			var str = "Hello world!"
+			document.write(str.substring(3)) //lo world!
+		</script>
+
+		6.substr //substr() 方法可在字符串中抽取从 start 下标开始的指定数目的字符。
+		<script type="text/javascript">
+			var str = "Hello world!"
+			document.write(str.substr(3)) //lo world!
+		</script>
+
+		7.indexOf //indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。
+		<script type="text/javascript">
+			var str = "Hello world!"
+			document.write(str.indexOf("Hello") + "<br />") //0
+			document.write(str.indexOf("World") + "<br />") //-1
+			document.write(str.indexOf("world")) //6
+		</script>
+
+		8.lastIndex //lastIndex 属性用于规定下次匹配的起始位置。
+		<script type="text/javascript">
+			var str = "The rain in Spain stays mainly in the plain";
+			var patt1 = new RegExp("ain", "g");
+
+			patt1.test(str)
+			document.write("Match found. index now at: " + patt1.lastIndex);
+		</script>
+
+		9.search //search() 方法用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串。
+		<script type="text/javascript">
+			var str = "Visit W3School!"
+			document.write(str.search(/W3School/)) //6
+		</script>
+
+		10.concat //concat() 方法用于连接两个或多个数组。 该方法不会改变现有的数组，而仅仅会返回被连接数组的一个副本。
+		<script type="text/javascript">
+			var a = [1, 2, 3];
+			document.write(a.concat(4, 5)); //1,2,3,4,5
+		</script>
+
+		11.split //split() 方法用于把一个字符串分割成字符串数组。 "2:3:4:5".split(":") //["2", "3", "4", "5"] "|a|b|c".split("|") //["", "a", "b", "c"] 
+		
+		12.toLowerCase //toLowerCase() 方法用于把字符串转换为小写。
+		<script type="text/javascript">
+			var str = "Hello World!"
+			document.write(str.toLowerCase()) //hello world!
+		</script>
+		
+		13.toUpperCase //toUpperCase() 方法用于把字符串转换为大写。
+		<script type="text/javascript">
+			var str = "Hello World!"
+			document.write(str.toUpperCase()) //HELLO WORLD!
+		</script>
+
+	</body>
+
+</html>
